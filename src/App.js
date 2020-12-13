@@ -1,24 +1,77 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.scss';
+import { Route } from 'react-router-dom';
+import About from './pages/About';
+import Home from './pages/Home';
+import Header from './components/Header';
+import Form from './pages/Form';
+import Work from './pages/Work';
+
+import { gsap } from 'gsap';
+import { CSSTransition } from 'react-transition-group';
+const routes = [
+  { path: '/', name: 'Home', Component: Home },
+  { path: '/about', name: 'About', Component: About },
+  { path: '/work', name: 'Work', Component: Work },
+  { path: '/form', name: 'form', Component: Form },
+];
 
 function App() {
+  const onEnter = (node) => {
+    // enter animation
+    gsap.from(
+      [node.children[0].firstElementChild, node.children[0].lastElementChild],
+      0.6,
+      {
+        y: 30,
+        delay: 0.6,
+        ease: 'power3.InOut',
+        opacity: 0,
+        stagger: {
+          amount: 0.6,
+        },
+      }
+    );
+  };
+  const onExit = (node) => {
+    // exit animation
+    gsap.to(
+      [node.children[0].firstElementChild, node.children[0].lastElementChild],
+      0.6,
+      {
+        y: -30,
+        ease: 'power3.InOut',
+        stagger: {
+          amount: 0.6,
+        },
+      }
+    );
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className='container'>
+        {routes.map(({ path, Component }) => (
+          <Route key={path} exact path={path}>
+            {({ match }) => (
+              <CSSTransition
+                in={match != null}
+                timeout={1200}
+                classNames='page'
+                onEnter={onEnter}
+                onExit={onExit}
+                unmountOnExit
+              >
+                <div className='page'>
+                  <Component />
+                </div>
+              </CSSTransition>
+            )}
+          </Route>
+        ))}
+      </div>
+    </>
   );
 }
 
