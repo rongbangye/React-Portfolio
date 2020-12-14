@@ -9,6 +9,7 @@ import Work from './pages/Work';
 import { gsap } from 'gsap';
 import { CSSTransition } from 'react-transition-group';
 const routes = [
+  { path: '/', name: 'About', Component: About },
   { path: '/about', name: 'About', Component: About },
   { path: '/work', name: 'Work', Component: Work },
   { path: '/form', name: 'form', Component: ContactMe },
