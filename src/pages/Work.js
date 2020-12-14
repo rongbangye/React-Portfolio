@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 const Work = () => {
   return (
     <div className='work-inner'>
-      <Title lineContent='This is the' lineContent2='Work page' />
+      <Title lineContent='Checkout my' lineContent2='Projects' />
       <div className='work-inner-info'>
         <a
           href='http://fathomless-stream-49781.herokuapp.com/login'
