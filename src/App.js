@@ -2,18 +2,16 @@ import React from 'react';
 import './App.scss';
 import { Route } from 'react-router-dom';
 import About from './pages/About';
-import Home from './pages/Home';
 import Header from './components/Header';
-import Form from './pages/Form';
+import ContactMe from './pages/Form';
 import Work from './pages/Work';
 
 import { gsap } from 'gsap';
 import { CSSTransition } from 'react-transition-group';
 const routes = [
-  { path: '/', name: 'Home', Component: Home },
   { path: '/about', name: 'About', Component: About },
   { path: '/work', name: 'Work', Component: Work },
-  { path: '/form', name: 'form', Component: Form },
+  { path: '/form', name: 'form', Component: ContactMe },
 ];
 
 function App() {

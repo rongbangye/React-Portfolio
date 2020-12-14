@@ -25,6 +25,14 @@
   justify-content: center;
   .page {
     position: absolute;
+    a {
+      text-decoration: none;
+      h2 {
+        font-family: 'Bebas Neue';
+        font-size: 48px;
+        color: #101010;
+      }
+    }
     .inner {
       display: flex;
       justify-content: center;
@@ -75,4 +83,50 @@
 .page-exit-active {
   opacity: 0;
   transition: opacity 400ms;
+}
+
+.work-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .work-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10% 0;
+    .work-desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+    .img-container {
+      img {
+        margin-left: 10%;
+        width: 764px;
+        height: 394px;
+      }
+    }
+  }
+}
+.form-inner {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 642px;
+  #nest-messages {
+    margin: 30px 0;
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 100px;
+  a {
+    padding: 5px;
+  }
 }
