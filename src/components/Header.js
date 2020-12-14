@@ -8,21 +8,33 @@ const Header = () => {
         <NavLink
           to='/about'
           exact
-          activeStyle={{ fontWeight: 'bold', color: 'red' }}
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'Gold',
+            textDecorationLine: 'line-through',
+          }}
         >
           About
         </NavLink>
         <NavLink
           to='/work'
           exact
-          activeStyle={{ fontWeight: 'bold', color: 'red' }}
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'Gold',
+            textDecorationLine: 'line-through',
+          }}
         >
           Work
         </NavLink>
         <NavLink
           to='/form'
           exact
-          activeStyle={{ fontWeight: 'bold', color: 'red' }}
+          activeStyle={{
+            fontWeight: 'bold',
+            color: 'Gold',
+            textDecorationLine: 'line-through',
+          }}
         >
           Contact Me
         </NavLink>

@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '../components/Title';
 import { Form, Input, Button } from 'antd';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
-
+import Footer from '../components/Footer';
 const ContactMe = () => {
   const onFinish = (values) => {
     console.log(values);
@@ -71,6 +71,7 @@ const ContactMe = () => {
           </Form>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

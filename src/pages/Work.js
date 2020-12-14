@@ -5,6 +5,7 @@ import netflix from '../assets/img/netflix-react.png';
 import nba from '../assets/img/nba-web.png';
 import hero from '../assets/img/hero-page.png';
 import covid19 from '../assets/img/covid19-tracker.png';
+import Footer from '../components/Footer';
 const Work = () => {
   return (
     <div className='work-inner'>
@@ -14,10 +15,9 @@ const Work = () => {
           href='http://fathomless-stream-49781.herokuapp.com/login'
           target='_blank'
           rel='noreferrer'
-          class='case-study'
           className='work-container'
         >
-          <div class='work-desc'>
+          <div className='work-desc'>
             <h2>ConnectedIn</h2>
             <h3>Full-Stack Application</h3>
           </div>
@@ -30,10 +30,9 @@ const Work = () => {
           href='https://netflix-clone-6094d.web.app/'
           target='_blank'
           rel='noreferrer'
-          class='case-study'
           className='work-container'
         >
-          <div class='work-desc'>
+          <div className='work-desc'>
             <h2>Netflix Clone</h2>
             <h3>Movies Website</h3>
           </div>
@@ -46,10 +45,9 @@ const Work = () => {
           href='https://hardcore-bhaskara-c04d2a.netlify.app/'
           target='_blank'
           rel='noreferrer'
-          class='case-study'
           className='work-container'
         >
-          <div class='work-desc'>
+          <div className='work-desc'>
             <h2>Hero Template</h2>
             <h3>Animation website</h3>
           </div>
@@ -62,10 +60,9 @@ const Work = () => {
           href='https://github.com/rongbangye/nba-web'
           target='_blank'
           rel='noreferrer'
-          class='case-study'
           className='work-container'
         >
-          <div class='work-desc'>
+          <div className='work-desc'>
             <h2>Nba Visualizer</h2>
             <h3>data app</h3>
           </div>
@@ -78,10 +75,9 @@ const Work = () => {
           href='https://rongbangye.github.io/Covid-19-Tracker/'
           target='_blank'
           rel='noreferrer'
-          class='case-study'
           className='work-container'
         >
-          <div class='work-desc'>
+          <div className='work-desc'>
             <h2>Covid-19 Tracker</h2>
             <h3>Website</h3>
           </div>
@@ -90,6 +86,7 @@ const Work = () => {
           </div>
         </a>
       </div>
+      <Footer />
     </div>
   );
 };
